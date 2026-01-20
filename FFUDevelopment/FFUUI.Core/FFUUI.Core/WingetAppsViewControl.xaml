@@ -27,7 +27,9 @@
             <GridViewColumn Width="80">
               <GridViewColumn.Header>
                 <CheckBox Content="All"
-                          IsChecked="{Binding AllSelected, Mode=OneWay}" />
+                          IsThreeState="True"
+                          IsChecked="{Binding AllSelected, Mode=OneWay}"
+                          Click="SelectAllCheckBox_Click" />
               </GridViewColumn.Header>
               <GridViewColumn.CellTemplate>
                 <DataTemplate>
@@ -196,7 +198,7 @@
     <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left">
       <TextBlock Text="{Binding Count, StringFormat=Total: {0}}" />
       <TextBlock Margin="20,0,0,0" Text="{Binding SelectedCount, StringFormat=Selected: {0}}" />
-      <Button Content="Remove Highlighted" Margin="40,0,0,0" Padding="10,2"/>
+      <Button Content="Remove Highlighted" Margin="40,0,0,0" Padding="10,2" Click="RemoveHighlighted_Click" />
       <Button Content="Remove All Highlighted" Margin="10,0,0,0" Padding="10,2" />
     </StackPanel>
 
