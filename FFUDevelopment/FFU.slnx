@@ -2,4 +2,7 @@
   <Folder Name="/Libraries/">
     <Project Path="FFU.Core/FFU.Core.csproj" />
   </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/FFU.Core.Tests/FFU.Core.Tests.csproj" Id="c8bbef16-00ed-4432-be03-96e20e9ca12c" />
+  </Folder>
 </Solution>
