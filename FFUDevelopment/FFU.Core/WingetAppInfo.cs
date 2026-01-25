@@ -1,10 +1,10 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 
-namespace FFUDevelopment.Core;
+namespace FFU.Core;
 
 /// <summary>
 ///   Represents an entry in the list of apps to install from the winget source.

@@ -1,4 +1,4 @@
-﻿namespace FFUDevelopment.Core;
+namespace FFU.Core;
 
 /// <summary>
 ///   Discrete states for download operations, used mainly for keeping things pretty.

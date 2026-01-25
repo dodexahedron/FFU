@@ -1,7 +1,7 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace FFUDevelopment.Core;
+namespace FFU.Core;
 
 /// <inheritdoc cref="JsonSerializerContext" />
 [JsonSerializable(typeof(WingetAppInfo))]

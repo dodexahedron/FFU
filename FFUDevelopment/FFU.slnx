@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="FFUDevelopment.Core/FFU.Core.csproj" />
+  <Folder Name="/Libraries/">
+    <Project Path="FFU.Core/FFU.Core.csproj" />
+  </Folder>
 </Solution>
