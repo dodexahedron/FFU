@@ -15,7 +15,7 @@ public sealed class WingetAppInfoComparer(
   WingetAppInfoComparerStrategy secondarySortStrategy = WingetAppInfoComparerStrategy.Default)
   : IComparer<WingetAppInfo>
 {
-  private static readonly StringComparer NaturalStringComparer =
+  internal static readonly StringComparer NaturalStringComparer =
     CultureInfo.InvariantCulture.CompareInfo.GetStringComparer(CompareOptions.NumericOrdering |
                                                                CompareOptions.IgnoreCase);
 
