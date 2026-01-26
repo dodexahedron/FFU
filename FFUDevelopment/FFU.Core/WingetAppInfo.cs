@@ -12,7 +12,8 @@ namespace FFU.Core;
 /// <remarks>This is a record type. The equality operator is true for both value and reference equality.</remarks>
 public sealed record WingetAppInfo(string Name, string Id)
   : INotifyPropertyChanged, IComparable<WingetAppInfo>,
-    IComparisonOperators<WingetAppInfo, WingetAppInfo, bool>
+    IEqualityOperators<WingetAppInfo, WingetAppInfo, bool>,
+    IComparable
 {
   /// <summary>Gets or sets a sequence number for install ordering.</summary>
   /// <remarks>
@@ -210,33 +211,21 @@ public sealed record WingetAppInfo(string Name, string Id)
   }
 
   /// <inheritdoc />
+  public int CompareTo(object? obj)
+  {
+    return obj switch
+    {
+      WingetAppInfo { } otherAppInfo => CompareTo(otherAppInfo),
+      null => 1,
+      _ => throw new InvalidCastException(
+        $"Unable to compare object of type {obj.GetType().Name} to {nameof(WingetAppInfo)}")
+    };
+  }
+
+  /// <inheritdoc />
   public int CompareTo(WingetAppInfo? other)
   {
     return WingetAppInfoComparer.Default.Compare(this, other);
-  }
-
-  /// <inheritdoc />
-  public static bool operator >(WingetAppInfo left, WingetAppInfo right)
-  {
-    return WingetAppInfoComparer.Default.Compare(left, right) > 0;
-  }
-
-  /// <inheritdoc />
-  public static bool operator >=(WingetAppInfo left, WingetAppInfo right)
-  {
-    return WingetAppInfoComparer.Default.Compare(left, right) >= 0;
-  }
-
-  /// <inheritdoc />
-  public static bool operator <(WingetAppInfo left, WingetAppInfo right)
-  {
-    return WingetAppInfoComparer.Default.Compare(left, right) < 0;
-  }
-
-  /// <inheritdoc />
-  public static bool operator <=(WingetAppInfo left, WingetAppInfo right)
-  {
-    return WingetAppInfoComparer.Default.Compare(left, right) <= 0;
   }
 
   /// <inheritdoc />
