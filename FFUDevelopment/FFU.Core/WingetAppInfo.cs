@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using FFU.Core.Attributes;
 using Newtonsoft.Json;
 
 namespace FFU.Core;
@@ -10,7 +11,9 @@ namespace FFU.Core;
 ///   Represents an entry in the list of apps to install from the winget source.
 /// </summary>
 /// <remarks>This is a record type. The equality operator is true for both value and reference equality.</remarks>
-public sealed record WingetAppInfo(string Name, string Id)
+public sealed record WingetAppInfo(
+  [property: SkipPropertyChangedTest] string Name,
+  [property: SkipPropertyChangedTest] string Id)
   : INotifyPropertyChanged, IComparable<WingetAppInfo>,
     IEqualityOperators<WingetAppInfo, WingetAppInfo, bool>,
     IComparable
