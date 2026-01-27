@@ -218,8 +218,8 @@ public class WingetAppInfoTests
     [ValueSource(nameof(NonSerializedProperties_Actual))]
     PropertyInfo prop)
   {
-    using IDisposable scope = Assert.EnterMultipleScope();
     Assume.That(WingetAppInfoType, Has.Property(prop.Name));
+    using IDisposable scope = Assert.EnterMultipleScope();
     Assert.That(prop, Has.Attribute(typeof(JsonIgnoreAttribute)));
     Assert.That(NonSerializedProperties_Expected, Has.Member(prop.Name));
   }
