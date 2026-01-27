@@ -1,4 +1,4 @@
-﻿@{
+@{
 RootModule = 'FFU.psm1'
 ModuleVersion = '0.1.0'
 CompatiblePSEditions = @('Core')
@@ -18,11 +18,11 @@ VariablesToExport = @()
 AliasesToExport = @()
 PrivateData = @{
   PSData = @{
-    Tags = @('FFU','Deployment','Imaging')
+    Tags = @('FFU','Deployment','Imaging','PSEdition_Core','Windows')
     # LicenseUri = ''
     ProjectUri = 'https://github.com/rbalsleyMSFT/FFU'
     # IconUri = ''
-    ReleaseNotes = 'Porting in progress. Not ready for production use.'
+    ReleaseNotes = 'Binary module is a work in progress. Not ready for production use.'
     Prerelease = 'alpha1'
   }
 }
