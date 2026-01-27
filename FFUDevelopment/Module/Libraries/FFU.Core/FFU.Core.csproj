@@ -12,7 +12,7 @@
     <AnalysisLevel>latest-recommended</AnalysisLevel>
     <DebugType>embedded</DebugType>
     <WarningLevel>8</WarningLevel>
-    <OutDir>$(ModuleBaseDir)bin\</OutDir>
+    <OutDir>$(ModuleBaseDir)Modules\</OutDir>
     <VersionPrefix>0.1</VersionPrefix>
     <VersionSuffix>-alpha1</VersionSuffix>
   </PropertyGroup>
