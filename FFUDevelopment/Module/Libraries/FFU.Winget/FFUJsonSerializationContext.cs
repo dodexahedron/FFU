@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace FFU.Core;
+namespace FFU.Winget;
 
 /// <inheritdoc cref="JsonSerializerContext" />
 [JsonSerializable(typeof(WingetAppInfo))]
@@ -16,4 +16,4 @@ namespace FFU.Core;
   UseStringEnumConverter = true,
   WriteIndented = true,
   UnmappedMemberHandling = JsonUnmappedMemberHandling.Skip)]
-public sealed partial class FFUJsonSerializationContext : JsonSerializerContext;
+public sealed partial class FFUWingetJsonSerializationContext : JsonSerializerContext;

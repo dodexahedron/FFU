@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+  <PropertyGroup>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <DebugType>embedded</DebugType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsGraphBuild>True</IsGraphBuild>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <WarningLevel>8</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ModuleBaseDir>$(MSBuildThisFileDirectory)Module\</ModuleBaseDir>
+    <ModuleFormatsDir>$(ModuleBaseDir)Formats\</ModuleFormatsDir>
+    <OutDir>$(ModuleBaseDir)</OutDir>
+  </PropertyGroup>
+
+</Project>

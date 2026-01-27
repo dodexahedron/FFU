@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Runtime.CompilerServices;
 
-namespace FFU.Core;
+namespace FFU.Winget;
 
 /// <summary>
 ///   An <see cref="IComparer{T}" /> implementation tailored to practical ordering scenarios of collections of

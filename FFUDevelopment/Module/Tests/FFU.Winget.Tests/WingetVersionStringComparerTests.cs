@@ -1,7 +1,7 @@
-﻿using System.Collections.Immutable;
+using System.Collections.Immutable;
 using System.Text.RegularExpressions;
 
-namespace FFU.Core.Tests;
+namespace FFU.Winget.Tests;
 
 [TestFixture]
 [Category("Winget")]

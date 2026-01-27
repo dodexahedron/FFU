@@ -1,4 +1,4 @@
-namespace FFU.Core;
+namespace FFU.Winget;
 
 /// <summary>
 ///   Discrete states for download operations, used mainly for keeping things pretty.

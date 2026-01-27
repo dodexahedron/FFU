@@ -1,9 +1,9 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using FFU.Core.Attributes;
 using Newtonsoft.Json;
 
-namespace FFU.Core.Tests;
+namespace FFU.Winget.Tests;
 
 [TestFixture]
 [TestOf(typeof(WingetAppInfo))]

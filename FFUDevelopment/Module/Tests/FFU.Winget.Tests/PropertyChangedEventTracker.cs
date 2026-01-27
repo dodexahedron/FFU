@@ -1,6 +1,6 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
-namespace FFU.Core.Tests;
+namespace FFU.Winget.Tests;
 
 internal sealed class PropertyChangedEventTracker
 {

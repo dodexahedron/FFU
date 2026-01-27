@@ -1,4 +1,4 @@
-namespace FFU.Core;
+namespace FFU.Winget;
 
 /// <summary>
 ///   Sorting behavior options for <see cref="WingetAppInfoComparer" />.

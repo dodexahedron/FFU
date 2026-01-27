@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
+    <UseWPF>True</UseWPF>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <DebugType>embedded</DebugType>
+    <WarningLevel>8</WarningLevel>
+    <OutDir>$(ModuleBaseDir)bin\</OutDir>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <VersionPrefix>0.1</VersionPrefix>
+    <VersionSuffix>-alpha1</VersionSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FFU.Core\FFU.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Dism" Version="4.0.7" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.2" />
+    <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.5.4" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" PrivateAssets="All" />
+    <PackageReference Include="JetBrains.Annotations" Version="2025.2.4" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.WindowsPackageManager.Utils" Version="1.28.90-preview" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="FFU.Winget.Tests" />
+  </ItemGroup>
+</Project>

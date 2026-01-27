@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using FFU.Core.Attributes;
 using Newtonsoft.Json;
 
-namespace FFU.Core;
+namespace FFU.Winget;
 
 /// <summary>
 ///   Represents an entry in the list of apps to install from the winget source.

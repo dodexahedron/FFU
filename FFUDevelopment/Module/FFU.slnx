@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Libraries/">
+    <Project Path="Libraries/FFU/FFU.Module.csproj" Id="66c88cdf-2e64-4260-afc0-00bf95dfb9a7" />
+    <Project Path="Libraries/FFU.Core/FFU.Core.csproj" Id="2445cb90-8cfa-4b91-a2ed-281f4962448b" />
+    <Project Path="Libraries/FFU.Winget/FFU.Winget.csproj" Id="7eb4f8c6-ec80-4edd-9ea3-dd22fc92aacf" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/FFU.Winget.Tests/FFU.Winget.Tests.csproj" Id="c8bbef16-00ed-4432-be03-96e20e9ca12c" />
+  </Folder>
+</Solution>

@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace FFU.Core;
+namespace FFU.Winget;
 
 /// <summary>
 ///   A modified Semantic Versioning string comparer which allows non-compliant versions that sometimes can be found in winget.

@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.22000.0</SupportedOSPlatformVersion>
+    <OutDir>$(ModuleBaseDir)bin\</OutDir>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>FFU</RootNamespace>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <DebugType>embedded</DebugType>
+    <WarningLevel>9</WarningLevel>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionSuffix>alpha1</VersionSuffix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>FFU</Title>
+    <Authors>rbalsley, dodexahedron</Authors>
+    <Product>FFU</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <!--<ItemGroup>
+    <None Remove="FFU.psd1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="FFU.psd1" TargetDir="$(ModuleBaseDir)">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <ProjectReference Include="..\FFU.Core\FFU.Core.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FFU.Winget\FFU.Winget.csproj">
+      <Private>false</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FFU.ps*1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
+ 

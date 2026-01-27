@@ -1,0 +1,6 @@
+
+[*.cs]
+
+# ReSharper properties
+resharper_braces_for_ifelse = required
+resharper_instance_members_qualify_declared_in = base_class
