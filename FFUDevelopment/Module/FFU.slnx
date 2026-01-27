@@ -5,6 +5,8 @@
     <Project Path="Libraries/FFU.Winget/FFU.Winget.csproj" Id="7eb4f8c6-ec80-4edd-9ea3-dd22fc92aacf" />
   </Folder>
   <Folder Name="/Solution Items/">
+    <File Path="../../.gitignore" />
+    <File Path=".editorconfig" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Build.targets" />
   </Folder>
