@@ -9,6 +9,7 @@
 # Build results
 [Dd]ebug/
 [Rr]elease/
+[Bb]uild/
 x64/
 x86/
 [Bb]in/
