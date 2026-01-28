@@ -1,3 +1,6 @@
+// Disable CA1036: Intentionally not implementing the comparison operators.
+// They are not intuitive/appropriate for this type.
+#pragma warning disable CA1036
 using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.CompilerServices;
