@@ -4,7 +4,6 @@
 using System.ComponentModel;
 using System.Numerics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using FFU.Core.Attributes;
 using Newtonsoft.Json;
 
@@ -21,6 +20,24 @@ public sealed record WingetAppInfo(
     IEqualityOperators<WingetAppInfo, WingetAppInfo, bool>,
     IComparable
 {
+  /// <summary>
+  ///   Creates a new instance of <see cref="WingetAppInfo" /> from the specified parameters.
+  /// </summary>
+  /// <param name="name">The <see cref="Name" /> of the package.</param>
+  /// <param name="id">The <see cref="Id" /> of the package.</param>
+  /// <param name="version">The <see cref="Version" /> string of the package.</param>
+  /// <param name="source">The <see cref="Source" /> of the package.</param>
+  /// <param name="architecture">The <see cref="Architecture" /> of the package.</param>
+  /// <remarks>
+  ///   This constructor is used by the module for creating packages from search results.
+  /// </remarks>
+  public WingetAppInfo(string name, string id, string version, string source, string architecture) : this(name, id)
+  {
+    Version = version;
+    Source = source;
+    Architecture = architecture;
+  }
+
   /// <summary>Gets or sets a sequence number for install ordering.</summary>
   /// <remarks>
   ///   Lower numbers come first.<br />
@@ -89,7 +106,7 @@ public sealed record WingetAppInfo(
   ///   Must be <see langword="null" />, absent, or one of the values supported by
   ///   <c>winget install -a [Architecture]</c>.
   /// </remarks>
-  public Architecture? Architecture
+  public string? Architecture
   {
     get;
     set
@@ -102,7 +119,7 @@ public sealed record WingetAppInfo(
       field = value;
       OnPropertyChanged();
     }
-  }
+  } = string.Empty;
 
   /// <summary>
   ///   Gets or sets a comma-delimited list of decimal integer exit codes which should be interpreted as success
@@ -121,7 +138,7 @@ public sealed record WingetAppInfo(
       field = value;
       OnPropertyChanged();
     }
-  }
+  } = string.Empty;
 
   /// <summary>Gets or sets whether the installer should ignore non-zero exit codes for this installation.</summary>
   public bool IgnoreNonZeroExitCodes
@@ -177,7 +194,7 @@ public sealed record WingetAppInfo(
       field = value;
       OnPropertyChanged();
     }
-  }
+  } = string.Empty;
 
   /// <summary>Gets or sets an <see langword="int" /> value intended to be used by progress bars.</summary>
   /// <remarks>This property is not serialized to JSON by default.</remarks>
